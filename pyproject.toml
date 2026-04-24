@@ -3,8 +3,8 @@ requires = ["uv_build>=0.8.3,<0.12.0"]
 build-backend = "uv_build"
 
 [project]
-name = "marimo"
-version = "0.23.2"
+name = "marimo-colobas"
+version = "0.23.2.post1"
 description = "A library for making reactive notebooks and apps"
 # We try to keep dependencies to a minimum, to avoid conflicts with
 # user environments; we need a very compelling reason for each dependency added.
@@ -98,8 +98,8 @@ sandbox = [
 # List of deps that are recommended for most users
 # in order to unlock all features in marimo
 recommended = [
-    "marimo[sql]",
-    "marimo[sandbox]",                  # For `marimo edit --sandbox DIRECTORY`
+    "marimo-colobas[sql]",
+    "marimo-colobas[sandbox]",                  # For `marimo edit --sandbox DIRECTORY`
     "altair>=5.4.0",                    # Plotting in datasource viewer
     "pydantic-ai-slim[openai]>=1.52.0", # AI features
     "ruff",                             # Formatting
@@ -600,4 +600,4 @@ python = "3.12.*"
 pip = ">=25.0.1,<26"
 
 [tool.pixi.pypi-dependencies]
-marimo = {path = ".", editable = true}
+marimo-colobas = {path = ".", editable = true}
